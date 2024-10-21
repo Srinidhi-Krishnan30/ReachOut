@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@types/validator": "^13.12.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.7"
+  }
+}
