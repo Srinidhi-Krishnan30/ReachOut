@@ -33,11 +33,11 @@ Create a new resource (e.g., ContactForm) to obtain an API endpoint.
 Update the form's action attribute in the HTML to point to your MockAPI endpoint.
 
 ## Technologies Used
-HTML
-JavaScript
-Tailwind CSS
-Validator.js
-MockAPI
+-HTML
+-JavaScript
+-Tailwind CSS
+-Validator.js
+-MockAPI
 
 
 ## Getting Started
