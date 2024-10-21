@@ -46,7 +46,7 @@ To get started with the project, follow these steps:
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/Srinidhi-Krishnan30/ReachOut.git
-2. **Run Proejct Files**
+2. **Run Project Files**
    cd ProjectFiles
    open index.html in your web browser
 
