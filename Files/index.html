@@ -3,40 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Including the validator module-->
+    <title>Contact Guvi</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.11.0/validator.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'guvi-green': '#34D399', // Lighter green color
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <div class="contact-form-container">
-        <h2>Contact Us</h2>
-        <form id="contactForm" method = "POST">                    
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
+<body class="bg-gradient-to-br from-green-50 to-emerald-50 min-h-screen p-4 md:p-8">
+    <div class="max-w-2xl mx-auto">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <!-- Header -->
+            <div class="bg-gradient-to-r from-emerald-400 to-green-400 p-6 text-center">
+                <h2 class="text-2xl font-bold text-white">Contact Guvi</h2>
+                <p class="text-white/90 mt-2">We'd love to hear from you!</p>
             </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
+
+            <!-- Form Section -->
+            <div class="p-8">
+                <form id="contactForm" method="POST" class="space-y-6">
+                    <!-- Name & Email Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-600 mb-1">Name</label>
+                            <input type="text" id="name" name="name" 
+                                class="w-full px-4 py-2 rounded-md border border-gray-200 focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 transition">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-600 mb-1">Email</label>
+                            <input type="email" id="email" name="email" 
+                                class="w-full px-4 py-2 rounded-md border border-gray-200 focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 transition">
+                        </div>
+                    </div>
+
+                    <!-- Contact Number -->
+                    <div>
+                        <label for="contactNumber" class="block text-sm font-medium text-gray-600 mb-1">Contact Number</label>
+                        <input type="tel" id="contactNumber" name="contactNumber" 
+                            class="w-full px-4 py-2 rounded-md border border-gray-200 focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 transition">
+                    </div>
+
+                    <!-- Subject -->
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-600 mb-1">Subject</label>
+                        <input type="text" id="subject" name="subject" 
+                            class="w-full px-4 py-2 rounded-md border border-gray-200 focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 transition">
+                    </div>
+
+                    <!-- Message -->
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-600 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" 
+                            class="w-full px-4 py-2 rounded-md border border-gray-200 focus:ring-2 focus:ring-emerald-400 focus:border-emerald-400 transition"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" 
+                        class="w-full bg-gradient-to-r from-emerald-400 to-green-400 text-white font-semibold py-2 px-6 rounded-md 
+                        hover:from-emerald-500 hover:to-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-400 
+                        transition duration-150">
+                        Send Message
+                    </button>
+                </form>
+
+                <!-- Response Message -->
+                <div id="responseMessage" class="mt-6 text-center text-gray-600"></div>
             </div>
-            <div class="form-group">
-                <label for="contactNumber">Contact Number:</label>
-                <input type="tel" id="contactNumber" name="contactNumber" >
+
+            <!-- Footer -->
+            <div class="bg-gray-50 px-6 py-3 text-center text-sm text-gray-500 border-t">
+                <p>© 2024 Guvi. All rights reserved.</p>
             </div>
-            <div class="form-group">
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" >
-            </div>
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="2"></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send</button>
-        </form>
-        <div id="responseMessage"></div>
+        </div>
     </div>
-    
-    <script src="script.js".js></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
