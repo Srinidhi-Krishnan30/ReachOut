@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 responseDiv.innerHTML = "\n                    <div class=\"error-message\">\n                        ".concat(errors.map(function (error) { return "<p>".concat(error, "</p>"); }).join(''), "\n                    </div>\n                ");
             }
             else {
-                responseDiv.innerHTML = "\n                    <div class=\"success-message\">\n                        <p>Form submitted successfully!</p>\n                    </div>\n                ";
+                responseDiv.innerHTML = "\n                    <div class=\"success-message\">\n                        <p>Form submitted successfully!</p>\n\n                    </div>\n                ";
                 contactForm.reset(); // Clear the form
             }
             // Sending data to mock api
